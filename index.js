@@ -1,4 +1,5 @@
 import { AppRegistry } from 'react-native';
-import App from './App';
+import Test from './Test';
+import App from './src/App';
 
 AppRegistry.registerComponent('demos_mobile', () => App);
