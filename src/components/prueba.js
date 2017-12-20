@@ -1,28 +1,28 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-
-import Button from './generics/Button';
-
 import { Actions } from 'react-native-router-flux';
-
-
+import { Container, Item, Input, Header, Body, Content, Title, Button } from 'native-base';
 
 class Prueba extends Component {
 
   prueba2Link() {
-    Actions.prueba2();
+    Actions.form();
   }
 
   render() {
     return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to the Demo!
-        </Text>
-        <Button onPress={this.prueba2Link.bind(this)}>
-          Ir a prueba2
-        </Button>
-      </View>
+      <Container>
+        <Header>
+          <Body>
+            <Title>Prueba1</Title>
+          </Body>
+        </Header>
+        <Content padder>
+          <Button block primary onPress={this.prueba2Link.bind(this)}>
+            <Text>Submit</Text>
+          </Button>
+        </Content>
+      </Container>
     );
   }
 }
